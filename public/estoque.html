@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Estoque</title>
+    <link rel="stylesheet" href="styleEstoque.css">
+    
+</head>
+<body>
+    <nav style="width: 100%; background-color: #343a40; padding: 10px 0; display: flex; justify-content: space-between; align-items: center; color: white;">
+        <div style="margin-left: 20px; font-size: 24px;">Sistemas Tiabete</div>
+        <div style="margin-right: 20px;">
+            <button id="viewLogButton" class="view-log" style="margin-right: 10px; padding: 10px 20px; border: none; border-radius: 4px; background-color: #007bff; color: white; cursor: pointer; font-size: 16px;">Visualizar Log do Sistema</button>
+            <button id="logoutButton" style="padding: 10px 20px; border: none; border-radius: 4px; background-color: #dc3545; color: white; cursor: pointer; font-size: 16px;">Sair</button>
+        </div>
+    </nav>
+    <h1>Gerenciamento de Estoque</h1>
+
+    <form id="produtoForm">
+        <input type="text" id="nome" placeholder="Nome do Produto" required>
+        <input type="number" id="quantidade" placeholder="Quantidade" required>
+        <input type="number" id="preco" placeholder="Preço" required>
+        <button type="submit">Cadastrar Produto</button>
+    </form>
+   
+    <h2>Produtos em Estoque</h2>
+    <ul id="produtosList"></ul>
+    <script src="scriptEstoque.js"></script>
+    <script>
+        document.getElementById('logoutButton').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+
+        document.getElementById('viewLogButton').addEventListener('click', function() {
+            // implementar scriptEstoque.js para ver LOG
+        });
+    </script>
+</body>
+</html>
